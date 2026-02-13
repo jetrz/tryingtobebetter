@@ -3,14 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Our Story</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, World!</h1>
-        <p>This is my website hosted on GitHub Pages.</p>
-        <a href="https://github.com" class="button">Visit GitHub</a>
+
+    <header class="hero">
+        <h1 class="title">PartnerName & MyName</h1>
+        <div class="timer-container">
+            <p>We have been together for:</p>
+            <div id="timer" class="timer">000 Days 00 Hours 00 Minutes</div>
+        </div>
+    </header>
+
+    <main class="timeline-container">
+        <h2>Our Journey</h2>
+        
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>The Day We Met</h3>
+                <small>Jan 1st, 202X</small>
+                <p>I knew you were a walking syntax error, but I debugged you anyway.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>First Date</h3>
+                <small>Feb 14th, 202X</small>
+                <p>We got coffee and I talked about Git merge conflicts for 20 minutes.</p>
+            </div>
+        </div>
+
+        </main>
+
+    <section class="proposal">
+        <h2>Will you be my Valentine?</h2>
+        <div class="btn-group">
+            <button id="yesBtn" class="btn btn-primary">Yes, absolutely!</button>
+            <button id="noBtn" class="btn btn-secondary">No</button>
+        </div>
+    </section>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>YAY! 💖</h2>
+            <p>I've already deployed our dinner plans to production.</p>
+            <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Celebration" style="width:100%; border-radius:10px;">
+        </div>
     </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
