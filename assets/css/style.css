@@ -126,6 +126,99 @@ body {
     text-align: center;
 }
 
+.timeline-img {
+    width: 100%;            /* Forces image to fit container width */
+    height: auto;           /* Maintains aspect ratio */
+    border-radius: 8px;     /* Smooth corners */
+    margin-top: 15px;       /* Space between date and image */
+    margin-bottom: 15px;    /* Space between image and text */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Optional: Slight zoom on hover for a premium feel */
+.timeline-img:hover {
+    transform: scale(1.02);
+}
+
+/* --- HERO SECTION (Full Screen) --- */
+.hero {
+    position: relative;
+    height: 100vh;          /* Full Viewport Height */
+    width: 100%;
+    overflow: hidden;       /* Hide anything that spills out */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* The Image Container */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;            /* Put it way in the back */
+}
+
+/* The Individual Images */
+.bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Ensures photo covers screen without distortion */
+    opacity: 0;             /* Hidden by default */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* The Class that makes an image visible */
+.bg-img.active {
+    opacity: 1;
+    transform: scale(1.05); /* Optional: Slow zoom effect */
+}
+
+/* The Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 40% Black Tint */
+    z-index: -1;            /* Behind text, in front of images */
+}
+
+/* The Text Content */
+.hero-content {
+    z-index: 10;            /* On top of everything */
+    color: white;           /* White text looks best on dark overlay */
+}
+
+/* Update Title Color for Dark Background */
+.title {
+    color: #FAF9F6;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.timer {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent glass effect */
+    backdrop-filter: blur(5px);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.timer-container p {
+    color: #ffffff; /* Example: Bright Yellow to stand out */
+    font-size: 1.2rem; /* Optional: Make it slightly larger */
+    font-weight: bold; /* Optional: Make it thicker */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* a black shadow for readability */
+    margin-bottom: 10px;
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 600px) {
     .timeline-container::after { left: 31px; }

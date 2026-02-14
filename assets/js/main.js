@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
 // Set your relationship start date here: YYYY, MM (0-indexed), DD
-const startDate = new Date(2023, 0, 15); // Jan 15, 2023
+const startDate = new Date(2025, 8, 13); // Jan 15, 2023
 
 // --- TIMER LOGIC ---
 function updateTimer() {
@@ -72,3 +72,21 @@ function confettiEffect() {
         setTimeout(() => div.remove(), 2100);
     }
 }
+
+// --- BACKGROUND SLIDER LOGIC ---
+const bgImages = document.querySelectorAll('.bg-img');
+let bgIndex = 0;
+
+function changeBackground() {
+    // 1. Remove 'active' class from current image
+    bgImages[bgIndex].classList.remove('active');
+
+    // 2. Calculate next index (loop back to 0 if at end)
+    bgIndex = (bgIndex + 1) % bgImages.length;
+
+    // 3. Add 'active' class to new image
+    bgImages[bgIndex].classList.add('active');
+}
+
+// Change image every 5 seconds (5000ms)
+setInterval(changeBackground, 5000);
